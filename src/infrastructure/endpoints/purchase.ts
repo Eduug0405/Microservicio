@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { makePurchase } from '../controllers/PurchaseController';
-import { dependencies } from '../../dependencies';
+import { dependencies } from '../Dependencies';
 
 export const purchaseRouter = Router();
 

@@ -1,12 +1,13 @@
-import { ItemRepositoryMySQL } from './infrastructure/repositories/ItemRepositoryMySQL';
-import { UserRepositoryMySQL } from './infrastructure/repositories/UserRepositoryMySQL';
-import { TransactionRepositoryMySQL } from './infrastructure/repositories/TransactionRepositoryMySQL';
-import { CreateUser } from './application/CreateUser';
-import { ListItems } from './application/ListItems';
-import { BuyItem } from './application/BuyItem';
-import { CreateItem } from './application/CreateItem';
-import { GetBalance } from './application/GetBalance';
-import { ListBalances } from './application/ListBalances'; 
+import { ItemRepositoryMySQL } from './repositories/ItemRepositoryMySQL';
+import { UserRepositoryMySQL } from './repositories/UserRepositoryMySQL';
+import { TransactionRepositoryMySQL } from './repositories/TransactionRepositoryMySQL';
+import { CreateUser } from '../application/CreateUser';
+import { ListItems } from '../application/ListItems';
+import { BuyItem } from '../application/BuyItem';
+import { CreateItem } from '../application/CreateItem';
+import { GetBalance } from '../application/GetBalance';
+import { ListBalances } from '../application/ListBalances'; 
+
 // Repositorios
 const itemRepo = new ItemRepositoryMySQL();
 const userRepo = new UserRepositoryMySQL();

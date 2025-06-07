@@ -5,6 +5,9 @@ export class ListBalances {
 
   async execute(): Promise<{ userId: string; pointsBalance: number }[]> {
     const users = await this.userRepo.findAll();
-    return users.map(u => ({ userId: u.id, pointsBalance: u.pointsBalance }));
+    return users.map(u => ({
+      userId: u.id,
+      pointsBalance: u.pointsBalance.raw
+    }));
   }
 }

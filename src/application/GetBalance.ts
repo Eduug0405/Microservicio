@@ -6,6 +6,9 @@ export class GetBalance {
   async execute(userId: string): Promise<{ userId: string; pointsBalance: number }> {
     const user = await this.userRepo.findById(userId);
     if (!user) throw new Error('Usuario no encontrado');
-    return { userId: user.id, pointsBalance: user.pointsBalance };
+    return { 
+      userId: user.id, 
+      pointsBalance: user.pointsBalance.raw 
+    };
   }
 }

@@ -1,6 +1,6 @@
 import { TransactionRepository } from '../../domain/port/TransactionRepository';
 import { Transaction } from '../../domain/models/Transaction';
-import pool from '../../database/mysql';
+import pool from '../database/mysql';
 
 export class TransactionRepositoryMySQL implements TransactionRepository {
   async save(transaction: Transaction): Promise<void> {
@@ -11,7 +11,7 @@ export class TransactionRepositoryMySQL implements TransactionRepository {
         transaction.id,
         transaction.userId,
         transaction.itemId || null,
-        transaction.amount,
+        transaction.amount.raw, 
         transaction.type,
         transaction.createdAt
       ]

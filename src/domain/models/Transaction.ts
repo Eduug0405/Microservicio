@@ -1,11 +1,12 @@
-export type TransactionType = 'PURCHASE' | 'BONUS';
+import { Points } from '../value-objects/Points'; 
+
+export type TransactionType = 'PURCHASE' | 'BONUS'; 
 
 export interface Transaction {
   id: string;
   userId: string;
-  itemId?: string; 
-  amount: number;
+  itemId?: string;
+  amount: Points; 
   type: TransactionType;
   createdAt: Date;
 }
-

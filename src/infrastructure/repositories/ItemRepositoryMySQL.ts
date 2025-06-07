@@ -1,6 +1,6 @@
 import { ItemRepository } from '../../domain/port/ItemRepository';
 import { Item } from '../../domain/models/Item';
-import pool from '../../database/mysql';
+import pool from '../database/mysql';
 
 export class ItemRepositoryMySQL implements ItemRepository {
   async findAll(): Promise<Item[]> {
